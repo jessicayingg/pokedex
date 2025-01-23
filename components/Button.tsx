@@ -5,7 +5,7 @@ type ButtonProps = {
 };
 
 const Button = ({ navButton }: ButtonProps) => (
-  <div className="button">
+  <div className="NavButton">
     <a className="NavButton" href={navButton.path}>
       {navButton.label}
     </a>
