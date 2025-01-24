@@ -3,13 +3,19 @@ import Button from "./Button";
 
 type HeaderProps = {
   navButtons: NavButton[];
+  logoButton: NavButton;
 };
 
-const Header = ({ navButtons }: HeaderProps) => (
+const Header = ({ navButtons, logoButton }: HeaderProps) => (
   <div className="NavBar">
-    {navButtons.map((button) => (
-      <Button key={button.label} navButton={button} />
-    ))}
+    <div className="Logo">
+      <Button key={logoButton.label} navButton={logoButton} />
+    </div>
+    <div className="NavBar-buttons">
+      {navButtons.map((button) => (
+        <Button key={button.label} navButton={button} />
+      ))}
+    </div>
   </div>
 );
 

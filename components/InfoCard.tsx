@@ -6,10 +6,10 @@ type PokemonProps = {
 
 const InfoCard = ({ pokemon }: PokemonProps) => (
   <div className="info-card">
-    <h1>
+    <p>
       Name: {pokemon.name} <span> ({pokemon.number}) </span>
-    </h1>
-    <h1> Type: {pokemon.type[0]} </h1>
+    </p>
+    <p> Type: {pokemon.type[0]} </p>
   </div>
 );
 
