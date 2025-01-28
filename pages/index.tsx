@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { PokemonInfo } from "@/types/types";
 
 const Index = () => {
-  const [pokemon, setPokemon] = useState<PokemonInfo | null>(null);
+  const [pokemonList, setPokemonList] = useState<PokemonInfo[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -17,8 +17,8 @@ const Index = () => {
           throw new Error("Failed to fetch Pokémon");
         }
 
-        const data: PokemonInfo = await response.json();
-        setPokemon(data);
+        const data: PokemonInfo[] = await response.json();
+        setPokemonList(data);
       } catch (err) {
         setError((err as Error).message);
       }
@@ -32,7 +32,9 @@ const Index = () => {
       Welcome to Pokedex! This is your homepage. This is what i passed into
       layout props.
       <Searchbar></Searchbar>
-      {pokemon && <InfoCard pokemon={pokemon} />}
+      {pokemonList.map((cur_pokemon) => (
+        <InfoCard pokemon={cur_pokemon} />
+      ))}
     </Layout>
   );
 };
