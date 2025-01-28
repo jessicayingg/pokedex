@@ -5,7 +5,7 @@ export type NavButton = {
 
 export type PokemonInfo = {
   name: string;
-  number: string;
+  id: string;
   type: string[];
   /*height: string;
   weight: string;
