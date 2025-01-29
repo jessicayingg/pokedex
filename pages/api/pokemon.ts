@@ -27,7 +27,8 @@ export default async function handler(
     const data = await response.json();
 
     const results = Array.isArray(data.results)
-      ? await Promise.all(
+      ? // HANDLES WHEN THE API RETURNS A LIST OF POKEMON
+        await Promise.all(
           data.results.map(async (pokemon: { name: string; url: string }) => {
             // pokeapi.co returns urls that lead to their other api calls for each pokemon, so I need the url
             const pokemonResponse = await fetch(pokemon.url);
@@ -44,7 +45,8 @@ export default async function handler(
             };
           })
         )
-      : [
+      : // HANDLES WHEN THE API IS CALLED FOR ONLY ONE POKEMON
+        [
           {
             id: data.id,
             name: capitalize(data.name),

@@ -18,7 +18,9 @@ const Index = () => {
       }
 
       try {
-        const response = await fetch(`/api/pokemon?query=${searchQuery}`);
+        const response = await fetch(
+          `/api/pokemon_autocomplete?query=${searchQuery}`
+        );
         // the ?query=lksajdflkj is so that I can pass the query to pokemon.ts
         if (!response.ok) {
           throw new Error("Failed to fetch Pokémon");

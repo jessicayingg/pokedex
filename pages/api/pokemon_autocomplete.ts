@@ -12,25 +12,31 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<PokemonData[] | { error: string }>
 ) {
-  const { query } = req.query; // Get query from request
+  //const { query } = req.query; // Get query from request
+  const query = req.query.query as string;
 
   try {
-    // Hardcoded example for now
-    //const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${query}`);
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon`);
+    const response = await fetch(
+      `https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0`
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch Pokémon");
     }
 
     const data = await response.json();
 
+    const filteredResults = data.results.filter((pokemon: { name: string }) =>
+      pokemon.name.toLowerCase().startsWith(query.toLowerCase())
+    );
+
     const results = await Promise.all(
-      data.results.map(async (pokemon: { name: string; url: string }) => {
+      filteredResults.map(async (pokemon: { name: string; url: string }) => {
         // pokeapi.co returns urls that lead to their other api calls for each pokemon, so I need the url
         const pokemonResponse = await fetch(pokemon.url);
         const pokemonData = await pokemonResponse.json();
 
         pokemonData.name = capitalize(pokemonData.name);
+        console.log(pokemonData.name);
         return {
           id: pokemonData.id,
           name: pokemonData.name,
