@@ -19,7 +19,8 @@ const InfoCard = ({ pokemon }: PokemonProps) => (
   <div className="info-card">
     <img src={pokemon.image}></img>
     <p>
-      Name: {pokemon.name} <span> (No. {pokemon.id}) </span>
+      Name: {pokemon.name}{" "}
+      <span className="pokemon-number"> (No. {pokemon.id}) </span>
     </p>
     <p> Type: {display_types(pokemon.types)} </p>
     <p> Height: {Number(pokemon.height) / 10} m </p>
