@@ -8,12 +8,18 @@ import DropdownPokemon from "../components/DropdownPokemon";
 const Index = () => {
   const [pokemonList, setPokemonList] = useState<PokemonInfo[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState<string | null>(null);
 
   useEffect(() => {
     // Fetch data from the local API route
     const fetchPokemon = async () => {
+      if (!searchQuery) {
+        return; // Don't run on first render
+      }
+
       try {
-        const response = await fetch("/api/pokemon");
+        const response = await fetch(`/api/pokemon?query=${searchQuery}`);
+        // the ?query=lksajdflkj is so that I can pass the query to pokemon.ts
         if (!response.ok) {
           throw new Error("Failed to fetch Pokémon");
         }
@@ -26,13 +32,13 @@ const Index = () => {
     };
 
     fetchPokemon();
-  }, []);
+  }, [searchQuery]);
 
   return (
     <Layout>
       Welcome to Pokedex! This is your homepage. This is what i passed into
       layout props.
-      <Searchbar></Searchbar>
+      <Searchbar onSearch={(query) => setSearchQuery(query)}></Searchbar>
       {pokemonList.map((cur_pokemon) => (
         <InfoCard pokemon={cur_pokemon} />
       ))}

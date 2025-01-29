@@ -10,9 +10,12 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<PokemonData[] | { error: string }>
 ) {
+  const { query } = req.query; // Get query from request
+
   try {
     // Hardcoded example for now
-    const response = await fetch("https://pokeapi.co/api/v2/pokemon");
+    //const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${query}`);
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon`);
     if (!response.ok) {
       throw new Error("Failed to fetch Pokémon");
     }
