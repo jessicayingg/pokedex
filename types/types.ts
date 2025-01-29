@@ -6,12 +6,14 @@ export type NavButton = {
 export type PokemonInfo = {
   name: string;
   id: string;
-  type: string[];
-  /*height: string;
+  types: string[];
+  height: string;
   weight: string;
+  image: string; // url of the image
+
+  /*
   gen: string;
   desc: string;
-  image: string; // url of the image
   evolutions: string[];
   abilities: { name: string; description: string }[]; */
 };
