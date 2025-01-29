@@ -3,6 +3,7 @@ import InfoCard from "../components/InfoCard";
 import Searchbar from "../components/Searchbar";
 import { useEffect, useState } from "react";
 import { PokemonInfo } from "@/types/types";
+import DropdownPokemon from "../components/DropdownPokemon";
 
 const Index = () => {
   const [pokemonList, setPokemonList] = useState<PokemonInfo[]>([]);
@@ -34,6 +35,9 @@ const Index = () => {
       <Searchbar></Searchbar>
       {pokemonList.map((cur_pokemon) => (
         <InfoCard pokemon={cur_pokemon} />
+      ))}
+      {pokemonList.map((cur_pokemon) => (
+        <DropdownPokemon pokemon={cur_pokemon}></DropdownPokemon>
       ))}
     </Layout>
   );
