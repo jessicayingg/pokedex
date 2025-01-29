@@ -11,7 +11,7 @@ function display_types(strList: any[]) {
       capitalize(strList[0].type.name) + ", " + capitalize(strList[1].type.name)
     );
   } else {
-    return strList[0].type.name;
+    return capitalize(strList[0].type.name);
   }
 }
 
