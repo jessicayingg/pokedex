@@ -1,7 +1,0 @@
-.dropdown {
-    background-color: rgb(240, 240, 240);
-    display: grid;
-    grid-template-columns: 10% 90%;
-    align-items: center;
-    margin: 5px;
-}

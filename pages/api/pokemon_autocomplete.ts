@@ -36,7 +36,6 @@ export default async function handler(
         const pokemonData = await pokemonResponse.json();
 
         pokemonData.name = capitalize(pokemonData.name);
-        console.log(pokemonData.name);
         return {
           id: pokemonData.id,
           name: pokemonData.name,
