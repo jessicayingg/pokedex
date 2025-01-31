@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import InfoCard from "../components/InfoCard";
 import Searchbar from "../components/Searchbar";
+import DPad from "../components/DPad";
 import { useEffect, useState } from "react";
 import { PokemonInfo } from "@/types/types";
 
@@ -46,6 +47,7 @@ const Index = () => {
           </div>
           <button>Back</button>
           <button>Next</button>
+          <DPad></DPad>
         </div>
         <div className="pokedex-right">
           <Searchbar onSearch={(query) => setSearchQuery(query)}></Searchbar>

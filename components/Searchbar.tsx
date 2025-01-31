@@ -45,6 +45,8 @@ const Searchbar = ({ onSearch }: SearchbarProps) => {
     if (userInput.trim()) {
       onSearch(userInput); // Pass the user input back to the parent
     }
+    // Also reset the pokemon input list to empty
+    setDropDownPokemonList([]);
   };
 
   return (
