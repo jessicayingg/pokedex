@@ -37,8 +37,6 @@ const Index = () => {
 
   return (
     <Layout>
-      Welcome to Pokedex! This is your homepage. This is what i passed into
-      layout props.
       <div className="pokedex">
         <div className="pokedex-left">
           <div className="info-card-container">

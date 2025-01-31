@@ -1,10 +1,12 @@
 .pokedex {
     display: flex;
+    justify-content: center; /* Centers horizontally */
+    height: 80vh; /* Ensure it takes the full height of the viewport */
 }
 
 .pokedex-left {
     background-color: #FF4141;
-    min-height: 60vh;
+    min-height: 40vh;
     min-width: 40vh;
 }
 
