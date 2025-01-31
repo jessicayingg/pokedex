@@ -39,10 +39,18 @@ const Index = () => {
     <Layout>
       Welcome to Pokedex! This is your homepage. This is what i passed into
       layout props.
-      <Searchbar onSearch={(query) => setSearchQuery(query)}></Searchbar>
-      {pokemonList.map((cur_pokemon) => (
-        <InfoCard pokemon={cur_pokemon} />
-      ))}
+      <div className="pokedex">
+        <div className="pokedex-left">
+          <div className="info-card-container">
+            {pokemonList.map((cur_pokemon) => (
+              <InfoCard pokemon={cur_pokemon} />
+            ))}
+          </div>
+        </div>
+        <div className="pokedex-right">
+          <Searchbar onSearch={(query) => setSearchQuery(query)}></Searchbar>
+        </div>
+      </div>
     </Layout>
   );
 };

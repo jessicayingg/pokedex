@@ -1,0 +1,16 @@
+.pokedex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pokedex-left {
+    background-color: #FF4141;
+}
+
+.info-card-container {
+    background-color: #D9D9D9;
+}
+
+.pokedex-right {
+    background-color: #FF4141;
+}
