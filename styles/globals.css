@@ -10,13 +10,28 @@
   display: grid;
   grid-template-columns: 5% 35% 60%;
   box-shadow: 0 3px 2px -2px rgb(193, 193, 193);
-
   padding: 10px;
+  max-height: 6vh;
+}
+
+.logo-button {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  /*background: none;*/
+  align-items: center;
+}
+
+.logo-icon {
+  object-fit: contain;
+  max-height: 6vh;
 }
 
 .NavBar-buttons {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
+  max-height: 6vh;
 }
 
 .NavButton {
