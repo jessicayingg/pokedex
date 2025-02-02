@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { capitalize } from "@/config/helper_functions";
 
-// THIS IS KIND OF A BACK UP
-
 type PokemonData = {
   id: number;
   name: string;

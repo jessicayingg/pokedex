@@ -10,8 +10,10 @@ function display_types(strList: any[]) {
     return (
       capitalize(strList[0].type.name) + ", " + capitalize(strList[1].type.name)
     );
-  } else {
+  } else if (strList.length == 1) {
     return capitalize(strList[0].type.name);
+  } else {
+    return "No type found";
   }
 }
 
