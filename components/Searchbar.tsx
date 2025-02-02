@@ -4,9 +4,10 @@ import DropdownPokemon from "../components/DropdownPokemon";
 
 type SearchbarProps = {
   onSearch: (query: string) => void;
+  onDropDownSelect: (query: string) => void;
 };
 
-const Searchbar = ({ onSearch }: SearchbarProps) => {
+const Searchbar = ({ onSearch, onDropDownSelect }: SearchbarProps) => {
   const [userInput, setUserInput] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [dropDownPokemonList, setDropDownPokemonList] = useState<PokemonInfo[]>(
@@ -68,7 +69,10 @@ const Searchbar = ({ onSearch }: SearchbarProps) => {
       </div>
       <div className="dropdown-container">
         {dropDownPokemonList.map((cur_pokemon) => (
-          <DropdownPokemon pokemon={cur_pokemon}></DropdownPokemon>
+          <DropdownPokemon
+            pokemon={cur_pokemon}
+            onSelect={onDropDownSelect}
+          ></DropdownPokemon>
         ))}
       </div>
     </div>

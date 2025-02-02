@@ -38,6 +38,7 @@ const Index = () => {
     fetchPokemon();
   }, [searchQuery]);
 
+  // DPad button controls
   const handleNextPokemon = () => {
     if (pokemonList.length > 0) {
       if (curPokemonIndex != pokemonList.length - 1) {
@@ -47,7 +48,6 @@ const Index = () => {
       }
     }
   };
-
   const handlePrevPokemon = () => {
     if (pokemonList.length > 0) {
       if (curPokemonIndex != 0) {
@@ -78,7 +78,10 @@ const Index = () => {
           </div>
         </div>
         <div className="pokedex-right">
-          <Searchbar onSearch={(query) => setSearchQuery(query)}></Searchbar>
+          <Searchbar
+            onSearch={(query) => setSearchQuery(query)}
+            onDropDownSelect={(query) => setSearchQuery(query)}
+          ></Searchbar>
         </div>
       </div>
     </Layout>
