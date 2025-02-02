@@ -63,7 +63,7 @@ const Searchbar = ({ onSearch }: SearchbarProps) => {
           }}
         ></input>
         <button className="search-button" onClick={handleSearch}>
-          Search
+          <img className="search-icon" src="images/search_button_icon.png" />
         </button>
       </div>
       <div className="dropdown-container">
