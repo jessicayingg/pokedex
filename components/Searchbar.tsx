@@ -62,15 +62,15 @@ const Searchbar = ({ onSearch }: SearchbarProps) => {
             setUserInput(e.target.value);
           }}
         ></input>
-        <div className="dropdown-container">
-          {dropDownPokemonList.map((cur_pokemon) => (
-            <DropdownPokemon pokemon={cur_pokemon}></DropdownPokemon>
-          ))}
-        </div>
+        <button className="search-button" onClick={handleSearch}>
+          Search
+        </button>
       </div>
-      <button className="search-button" onClick={handleSearch}>
-        Search
-      </button>
+      <div className="dropdown-container">
+        {dropDownPokemonList.map((cur_pokemon) => (
+          <DropdownPokemon pokemon={cur_pokemon}></DropdownPokemon>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,5 +1,7 @@
 .searchbar {
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    padding: 20px;
 }
 
 .search-input {
@@ -17,14 +19,14 @@
     width: 50vh;
     height: 50vh;
     overflow-y: auto;
-    position: absolute;
     background-color: white;
+    display: grid;
 }
 
 .dropdown {
     background-color: rgb(240, 240, 240);
-    display: flex;
     height: 10vh;
+    display: flex;
     align-items: center;
     margin: 5px 0px;
 }
