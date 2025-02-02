@@ -69,8 +69,8 @@ const Index = () => {
             {pokemonList.length == 0 && <div className="info-card" />}
           </div>
           <div className="info-card-controls">
-            <button>Back</button>
-            <button>Next</button>
+            <button></button>
+            <button></button>
             <DPad
               nextPokemon={handleNextPokemon}
               prevPokemon={handlePrevPokemon}

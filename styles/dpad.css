@@ -2,9 +2,8 @@
     display: grid;
     grid-template-columns: 1.3fr 1fr 1.3fr;
     grid-template-rows: 1.3fr 1fr 1.3fr;
-    width: 150px;
-    height: 150px;
-    margin: auto;
+    width: 40%;
+    height: 90%;
   }
   
   .dpad-button {

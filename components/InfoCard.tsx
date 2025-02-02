@@ -17,11 +17,15 @@ function display_types(strList: any[]) {
 
 const InfoCard = ({ pokemon }: PokemonProps) => (
   <div className="info-card">
-    <img src={pokemon.image}></img>
-    <p>
-      Name: {pokemon.name}{" "}
-      <span className="pokemon-number"> (No. {pokemon.id}) </span>
-    </p>
+    <div>
+      <div>
+        <p>
+          {pokemon.name}{" "}
+          <span className="pokemon-number"> (No. {pokemon.id}) </span>
+        </p>
+      </div>
+      <img src={pokemon.image}></img>
+    </div>
     <p> Type: {display_types(pokemon.types)} </p>
     <p> Height: {Number(pokemon.height) / 10} m </p>
     <p> Weight: {Number(pokemon.weight) / 10} kg </p>
