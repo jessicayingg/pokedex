@@ -1,6 +1,7 @@
 export type NavButton = {
   label: string;
   path: string;
+  extraClasses: string;
 };
 
 export type PokemonInfo = {

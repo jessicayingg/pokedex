@@ -28,7 +28,8 @@
     height: 50vh;
     overflow-y: auto;
     background-color: white;
-    display: grid;
+    display: flex;
+    flex-direction: column;
 }
 
 .dropdown {
@@ -36,7 +37,7 @@
     height: 10vh;
     display: flex;
     align-items: center;
-    margin-bottom: 2px;
+    gap: 2px;
     border: none;
 }
 
