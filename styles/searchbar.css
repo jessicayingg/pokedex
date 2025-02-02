@@ -36,7 +36,12 @@
     height: 10vh;
     display: flex;
     align-items: center;
-    margin: 5px 0px;
+    margin-bottom: 2px;
+    border: none;
+}
+
+.dropdown:hover {
+    background-color: rgb(219, 219, 219);
 }
 
 .search-button {
