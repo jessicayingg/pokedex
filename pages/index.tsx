@@ -45,9 +45,11 @@ const Index = () => {
               <InfoCard pokemon={cur_pokemon} />
             ))}
           </div>
-          <button>Back</button>
-          <button>Next</button>
-          <DPad></DPad>
+          <div className="info-card-controls">
+            <button>Back</button>
+            <button>Next</button>
+            <DPad></DPad>
+          </div>
         </div>
         <div className="pokedex-right">
           <Searchbar onSearch={(query) => setSearchQuery(query)}></Searchbar>

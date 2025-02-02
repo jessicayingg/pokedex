@@ -5,10 +5,12 @@ type PokemonProps = {
 };
 
 const DropdownPokemon = ({ pokemon }: PokemonProps) => (
-  <div className="dropdown">
-    <img src={pokemon.image}></img>
-    <p>{pokemon.name}</p>
-  </div>
+  <button>
+    <div className="dropdown">
+      <img src={pokemon.image}></img>
+      <p>{pokemon.name}</p>
+    </div>
+  </button>
 );
 
 export default DropdownPokemon;

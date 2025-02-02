@@ -8,9 +8,9 @@ type HeaderProps = {
 const Header = ({ navButtons }: HeaderProps) => (
   <div className="NavBar">
     <div className="Logo">
-      <button className="logo-button">
+      <a className="logo-button" href="/">
         <img className="logo-icon" src="images/pokeball.png"></img>
-      </button>
+      </a>
     </div>
     <div></div>
     <div className="NavBar-buttons">
