@@ -10,6 +10,8 @@ const Index = () => {
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
 
+  const [curPokemonIndex, setCurPokemonIndex] = useState(0); // Track the current index of the pokemon displayed
+
   useEffect(() => {
     // Fetch data from the local API route
     const fetchPokemon = async () => {
@@ -36,19 +38,43 @@ const Index = () => {
     fetchPokemon();
   }, [searchQuery]);
 
+  const handleNextPokemon = () => {
+    if (pokemonList.length > 0) {
+      if (curPokemonIndex != pokemonList.length - 1) {
+        setCurPokemonIndex(curPokemonIndex + 1);
+      } else {
+        setCurPokemonIndex(0);
+      }
+    }
+  };
+
+  const handlePrevPokemon = () => {
+    if (pokemonList.length > 0) {
+      if (curPokemonIndex != 0) {
+        setCurPokemonIndex(curPokemonIndex - 1);
+      } else {
+        setCurPokemonIndex(pokemonList.length - 1);
+      }
+    }
+  };
+
   return (
     <Layout>
       <div className="pokedex">
         <div className="pokedex-left">
           <div className="info-card-container">
-            {pokemonList.map((cur_pokemon) => (
-              <InfoCard pokemon={cur_pokemon} />
-            ))}
+            {pokemonList.length > 0 && (
+              <InfoCard pokemon={pokemonList[curPokemonIndex]} />
+            )}
+            {pokemonList.length == 0 && <div className="info-card" />}
           </div>
           <div className="info-card-controls">
             <button>Back</button>
             <button>Next</button>
-            <DPad></DPad>
+            <DPad
+              nextPokemon={handleNextPokemon}
+              prevPokemon={handlePrevPokemon}
+            ></DPad>
           </div>
         </div>
         <div className="pokedex-right">
