@@ -70,7 +70,7 @@ const Index = () => {
     ) {
       return pokemonList[curPokemonIndex + 1].image;
     } else {
-      return "";
+      return undefined;
     }
   };
 
