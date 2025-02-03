@@ -58,6 +58,22 @@ const Index = () => {
     }
   };
 
+  const getMiniPokemon = (num: Number) => {
+    if (num == -1 && pokemonList.length > 0 && curPokemonIndex != 0) {
+      return pokemonList[curPokemonIndex - 1].image;
+    } else if (num == 0 && pokemonList.length > 0) {
+      return pokemonList[curPokemonIndex].image;
+    } else if (
+      num == 1 &&
+      pokemonList.length > 0 &&
+      curPokemonIndex < pokemonList.length - 1
+    ) {
+      return pokemonList[curPokemonIndex + 1].image;
+    } else {
+      return "";
+    }
+  };
+
   return (
     <Layout>
       <div className="pokedex">
@@ -71,6 +87,17 @@ const Index = () => {
           <div className="info-card-controls">
             <button></button>
             <button></button>
+            <div className="mini-display">
+              <img
+                className="mini-pokemon side-mini"
+                src={getMiniPokemon(-1)}
+              ></img>
+              <img className="mini-pokemon" src={getMiniPokemon(0)}></img>
+              <img
+                className="mini-pokemon side-mini"
+                src={getMiniPokemon(1)}
+              ></img>
+            </div>
             <DPad
               nextPokemon={handleNextPokemon}
               prevPokemon={handlePrevPokemon}

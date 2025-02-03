@@ -25,6 +25,24 @@
 
 .info-card-controls {
     grid-row: 2;
+    display: flex;
+}
+
+.mini-display {
+    width: 24vh;
+    height: 8vh;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    place-items: center;
+}
+
+.mini-pokemon {
+    overflow: hidden;
+}
+
+.side-mini {
+    width: 8vh;
 }
 
 .pokedex-right {
