@@ -7,3 +7,24 @@
 .pokemon-number {
     font-size: smaller;
 }
+
+.types-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.pokemon-type {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.grass-type {
+    background-color: #82C373;
+}
+
+.poison-type {
+    background-color: rgb(137, 0, 195);
+}

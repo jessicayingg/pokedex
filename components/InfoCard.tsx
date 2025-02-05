@@ -8,27 +8,27 @@ type PokemonProps = {
 function display_types(strList: any[]) {
   if (strList.length == 2) {
     return (
-      <p>
+      <p className="types-container">
         Types:
-        <div className={`${strList[0].type.name}-type`}>
+        <div className={`${strList[0].type.name}-type pokemon-type`}>
           {capitalize(strList[0].type.name)}
         </div>
-        <div className={`${strList[1].type.name}-type`}>
+        <div className={`${strList[1].type.name}-type pokemon-type`}>
           {capitalize(strList[1].type.name)}
         </div>
       </p>
     );
   } else if (strList.length == 1) {
     return (
-      <p>
+      <p className="types-container">
         Type:
-        <div className={`${strList[0].type.name}-type`}>
+        <div className={`${strList[0].type.name}-type pokemon-type`}>
           {capitalize(strList[0].type.name)}
         </div>
       </p>
     );
   } else {
-    return <p>Type: No type found</p>;
+    return <p className="types-container">Type: No type found</p>;
   }
 }
 
