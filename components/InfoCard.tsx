@@ -8,12 +8,27 @@ type PokemonProps = {
 function display_types(strList: any[]) {
   if (strList.length == 2) {
     return (
-      capitalize(strList[0].type.name) + ", " + capitalize(strList[1].type.name)
+      <p>
+        Types:
+        <div className={`${strList[0].type.name}-type`}>
+          {capitalize(strList[0].type.name)}
+        </div>
+        <div className={`${strList[1].type.name}-type`}>
+          {capitalize(strList[1].type.name)}
+        </div>
+      </p>
     );
   } else if (strList.length == 1) {
-    return capitalize(strList[0].type.name);
+    return (
+      <p>
+        Type:
+        <div className={`${strList[0].type.name}-type`}>
+          {capitalize(strList[0].type.name)}
+        </div>
+      </p>
+    );
   } else {
-    return "No type found";
+    return <p>Type: No type found</p>;
   }
 }
 
@@ -28,7 +43,7 @@ const InfoCard = ({ pokemon }: PokemonProps) => (
       </div>
       <img src={pokemon.image}></img>
     </div>
-    <p> Type: {display_types(pokemon.types)} </p>
+    {display_types(pokemon.types)}
     <p> Height: {Number(pokemon.height) / 10} m </p>
     <p> Weight: {Number(pokemon.weight) / 10} kg </p>
   </div>
