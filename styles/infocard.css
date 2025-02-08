@@ -61,3 +61,19 @@
 .dragon-type {
     background-color: rgb(108, 56, 238);
 }
+
+.fairy-type {
+    background-color: rgb(255, 127, 187);
+}
+
+.rock-type {
+    background-color: rgb(109, 109, 109);
+}
+
+.dark-type {
+    background-color: rgb(26, 26, 26);
+}
+
+.fire-type {
+    background-color: rgb(221, 0, 0);
+}
