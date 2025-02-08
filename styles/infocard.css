@@ -77,3 +77,15 @@
 .fire-type {
     background-color: rgb(221, 0, 0);
 }
+
+.psychic-type {
+    background-color: #cd0096;
+}
+
+.ghost-type {
+    background-color: rgb(120, 0, 120);
+}
+
+.ice-type {
+    background-color: rgb(0, 204, 255);
+}
