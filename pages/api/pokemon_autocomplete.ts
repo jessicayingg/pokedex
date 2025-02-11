@@ -23,9 +23,14 @@ export default async function handler(
 
     const data = await response.json();
 
-    const filteredResults = data.results.filter((pokemon: { name: string }) =>
-      pokemon.name.toLowerCase().startsWith(query.toLowerCase())
-    );
+    const filteredResults = data.results
+      .filter((pokemon: { name: string }) =>
+        pokemon.name.toLowerCase().startsWith(query.toLowerCase())
+      )
+      .filter((pokemon: { url: string }) => {
+        const id = Number(pokemon.url.split("/").slice(-2, -1)[0]);
+        return id < 10000;
+      });
 
     const results = await Promise.all(
       filteredResults.map(async (pokemon: { name: string; url: string }) => {
