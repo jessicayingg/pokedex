@@ -76,6 +76,11 @@ const Index = () => {
 
   return (
     <Layout>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      ></link>
+
       <div className="pokedex">
         <div className="pokedex-left">
           <div className="info-card-container">
@@ -85,8 +90,9 @@ const Index = () => {
             {pokemonList.length == 0 && <div className="info-card" />}
           </div>
           <div className="info-card-controls">
-            <button></button>
-            <button></button>
+            <button>
+              <span className="star-button fa fa-star checked"></span>
+            </button>
             <div className="mini-display">
               <img
                 className="mini-pokemon side-mini"

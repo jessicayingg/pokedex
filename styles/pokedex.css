@@ -26,6 +26,9 @@
 .info-card-controls {
     grid-row: 2;
     display: flex;
+    gap: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 .mini-display {
@@ -43,6 +46,10 @@
 
 .side-mini {
     width: 8vh;
+}
+
+.star-button {
+    
 }
 
 .pokedex-right {

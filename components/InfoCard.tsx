@@ -9,7 +9,6 @@ function display_types(strList: any[]) {
   if (strList.length == 2) {
     return (
       <p className="types-container">
-        Types:
         <div className={`${strList[0].type.name}-type pokemon-type`}>
           {capitalize(strList[0].type.name)}
         </div>
@@ -21,7 +20,6 @@ function display_types(strList: any[]) {
   } else if (strList.length == 1) {
     return (
       <p className="types-container">
-        Type:
         <div className={`${strList[0].type.name}-type pokemon-type`}>
           {capitalize(strList[0].type.name)}
         </div>
