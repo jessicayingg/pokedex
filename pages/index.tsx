@@ -90,8 +90,8 @@ const Index = () => {
             {pokemonList.length == 0 && <div className="info-card" />}
           </div>
           <div className="info-card-controls">
-            <button>
-              <span className="star-button fa fa-star checked"></span>
+            <button className="star-button">
+              <span className="fa fa-star"></span>
             </button>
             <div className="mini-display">
               <img
