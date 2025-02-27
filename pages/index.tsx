@@ -5,6 +5,10 @@ import DPad from "../components/DPad";
 import { useEffect, useState } from "react";
 import { PokemonInfo } from "@/types/types";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
+
 const Index = () => {
   const [pokemonList, setPokemonList] = useState<PokemonInfo[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -76,11 +80,6 @@ const Index = () => {
 
   return (
     <Layout>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      ></link>
-
       <div className="pokedex">
         <div className="pokedex-left">
           <div className="info-card-container">
@@ -91,7 +90,7 @@ const Index = () => {
           </div>
           <div className="info-card-controls">
             <button className="star-button">
-              <span className="fa fa-star"></span>
+              <FontAwesomeIcon icon={regularStar} />
             </button>
             <div className="mini-display">
               <img

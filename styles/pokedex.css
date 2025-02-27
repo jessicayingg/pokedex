@@ -54,7 +54,12 @@
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     border-style: none;
-    background-color: rgb(243, 243, 243);
+    background-color: #2C2C2C;
+    font-size: 150%;
+}
+
+.fa-star {
+    color: rgb(243, 243, 243);
 }
 
 .pokedex-right {
