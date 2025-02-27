@@ -82,6 +82,7 @@ const Index = () => {
     <Layout>
       <div className="pokedex">
         <div className="pokedex-left">
+          <div className="circle"></div>
           <div className="info-card-container">
             {pokemonList.length > 0 && (
               <InfoCard pokemon={pokemonList[curPokemonIndex]} />
