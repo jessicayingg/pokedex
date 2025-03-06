@@ -91,6 +91,7 @@ const Index = () => {
           </div>
           <div className="info-card-controls">
             <button className="star-button">
+              {/* regularStar for regular, solidStar for solid*/}
               <FontAwesomeIcon icon={regularStar} />
             </button>
             <div className="mini-display">
