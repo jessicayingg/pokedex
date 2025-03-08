@@ -1,0 +1,36 @@
+.login-container {
+    /*background-color: rgb(240, 240, 240);*/
+    background-color: white;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    gap: 5vh;
+    padding: 10px;
+}
+
+.login-text {
+    font-size: 30px;
+    align-self: center;
+}
+
+.username-input, .password-input {
+    width: 98%;
+}
+
+.forgot-password {
+    justify-self: end;
+}
+
+.login-button {
+    height: 8vh;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
