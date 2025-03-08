@@ -51,14 +51,16 @@
     grid-template-columns: 1fr 2fr 1fr;
     place-items: center;
     align-self: center;
+    overflow: hidden;
 }
 
 .mini-pokemon {
     overflow: hidden;
+    height: 100%;
 }
 
 .side-mini {
-    width: 8vh;
+    height: 70%;
 }
 
 .star-button {
