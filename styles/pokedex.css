@@ -11,7 +11,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 3vh 3vh 3vh 3vh;
     border-radius: 3% 3% 0% 3%;
 }
@@ -29,12 +29,13 @@
     background-color: #D9D9D9;
     padding: 20px;
     aspect-ratio: 1 / 1;
-    width: 82%;
+    width: 80%;
     align-self: center;
 }
 
 .info-card-controls {
     display: flex;
+    height: 15%;
     justify-content: space-evenly;
     gap: 4vh;
     margin: 0vh 5vh 0vh 5vh;
@@ -76,9 +77,31 @@
     /*min-height: 40vh;*/
     width: 50%;
     display: flex;
+    flex-direction: column;
+    border-radius: 0% 0% 3% 0%;
+}
+
+.pokedex-right-empty {
+    background-color: white;
+    height: 10%;
 }
 
 .pokedex-right-top {
     background-color: white;
+    height: 12%;
+    display: flex;
+    flex-direction: row;
 }
 
+.pokedex-right-rect {
+    background-color: #FF4141;
+    height: 100%;
+    width: 40%;
+}
+
+.pokedex-right-triangle {
+    background-color: #FF4141;
+    height: 100%;
+    background: linear-gradient(to bottom left, #fff 0%, #fff 50%, #FF4141 50%, #FF4141 100%);
+    width: 20%;
+}

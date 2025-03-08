@@ -112,11 +112,10 @@ const Index = () => {
           </div>
         </div>
         <div className="pokedex-right">
+          <div className="pokedex-right-empty"></div>
           <div className="pokedex-right-top">
-            <div className="pokedex-right-empty"></div>
             <div className="pokedex-right-rect"></div>
             <div className="pokedex-right-triangle"></div>
-            <div className="pokedex-right-empty-corner"></div>
           </div>
           <Searchbar
             onSearch={(query) => setSearchQuery(query)}

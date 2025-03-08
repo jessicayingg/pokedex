@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: auto 1fr;
     padding: 20px;
+    margin-top: 10px;
 }
 
 .search-input {
@@ -13,7 +14,7 @@
 }
 
 .search-container {
-    width: 50vh;
+    width: 45vh;
     display: grid;
     grid-template-columns: 1fr auto;
     background-color: white;
@@ -24,8 +25,8 @@
 }
 
 .dropdown-container {
-    width: 50vh;
-    height: 50vh;
+    width: 46vh;
+    height: 42vh;
     overflow-y: auto;
     background-color: white;
     display: flex;
