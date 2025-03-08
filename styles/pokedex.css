@@ -1,24 +1,24 @@
 .pokedex {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    height: 80vh; /* Ensure it takes the full height of the viewport */
+    justify-self: center;
+    justify-content: center;
+    height: 80vh;
+    width: 200vh;
 }
 
 .pokedex-left {
     background-color: #FF4141;
-    min-height: 40vh;
     width: 60vh;
-    display: grid;
-    grid-template-rows: 0.5fr 2fr 3fr;
-    justify-content: center;
-    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5px 20px;
 }
 
 .circle {
     background-color: #D9D9D9;
-    margin: 5% 0% 0% 0%;
-    width: 12%;
-    aspect-ratio: 1 / 1;
+    width: 11%;
+    aspect-ratio: 1;
     border-radius: 50%;
 }
 
@@ -29,10 +29,10 @@
     background-color: #D9D9D9;
     padding: 20px;
     aspect-ratio: 1 / 1;
+    width: 70%;
 }
 
 .info-card-controls {
-    grid-row: 3;
     display: flex;
     gap: 2vh;
     padding-top: 1vh;
