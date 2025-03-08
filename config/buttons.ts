@@ -45,12 +45,12 @@ const navButtons: NavButton[] = [
   },
   {
     label: "Log In",
-    path: "/page2",
+    path: "/login",
     extraClasses: "log-in-button",
   },
   {
     label: "Register",
-    path: "/page2",
+    path: "/register",
     extraClasses: "register-button",
   },
 ];
