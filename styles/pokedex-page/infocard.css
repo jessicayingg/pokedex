@@ -4,13 +4,29 @@
     width: 100%;
 }
 
+.info-card-colour {
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon-name-container {
+    background-color: white;
+    width: fit-content;
+}
+
 .pokemon-number {
     font-size: smaller;
+}
+
+.pokemon-img-container {
+    background-color: white;
+    width: fit-content;
 }
 
 .types-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    background-color: white;
 }
 
 .pokemon-type {
@@ -20,6 +36,11 @@
     border-radius: 5px;
     color: white;
     background-color: gray;
+}
+
+.pokemon-height-container, .pokemon-weight-container {
+    background-color: white;
+    width: fit-content;
 }
 
 .grass-type {
