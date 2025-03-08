@@ -8,11 +8,11 @@
 
 .pokedex-left {
     background-color: #FF4141;
-    width: 60vh;
+    width: 55vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding: 5px 20px;
+    justify-content: space-between;
+    padding: 3vh 3vh 3vh 3vh;
 }
 
 .circle {
@@ -25,23 +25,20 @@
 .info-card-container {
     display: flex;
     justify-content: center;
-    margin: 5% 0% 5% 0%;
     background-color: #D9D9D9;
     padding: 20px;
     aspect-ratio: 1 / 1;
-    width: 70%;
+    width: 82%;
+    align-self: center;
 }
 
 .info-card-controls {
     display: flex;
-    gap: 2vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    justify-content: space-evenly;
 }
 
 .mini-display {
-    width: 24vh;
-    height: 8vh;
+    height: 11vh;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
