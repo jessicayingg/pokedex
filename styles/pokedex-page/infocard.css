@@ -1,6 +1,6 @@
 .info-card {
     background-color: #FFFFFF;
-    padding: 2px 20px;
+    padding: 2% 10%;
     width: 100%;
 }
 
@@ -9,21 +9,31 @@
     flex-direction: column;
     align-items: center;
     padding: 3%;
-    gap: 2vh;
+    gap: 1vh;
+    width: 100%;
+}
+
+.pokemon-basic-info {
+    display: flex;
+    flex-direction: row;
 }
 
 .pokemon-name-container {
     background-color: white;
-    width: 80%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    border-radius: 8%;
 }
 
 .pokemon-name {
     font-size: 30px;
+    white-space: nowrap;
 }
 
 .pokemon-number {
     font-size: 15px;
-    margin-left: 4%
 }
 
 .pokemon-img-container {

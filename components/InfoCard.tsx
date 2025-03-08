@@ -35,14 +35,14 @@ function display_pokemon({ pokemon }: PokemonProps) {
     return (
       <div className={`${pokemon.types[0].type.name}-type-darker info-card`}>
         <div className={`${pokemon.types[0].type.name}-type info-card-colour`}>
-          <div className="pokemon-name-container">
-            <div className="pokemon-name">
-              {pokemon.name}
-              <span className="pokemon-number"> (No. {pokemon.id}) </span>
+          <div className="pokemon-basic-info">
+            <div className="pokemon-name-container">
+              <div className="pokemon-name">{pokemon.name}</div>
+              <div className="pokemon-number"> (No. {pokemon.id}) </div>
             </div>
-          </div>
-          <div className="pokemon-img-container">
-            <img src={pokemon.image}></img>
+            <div className="pokemon-img-container">
+              <img src={pokemon.image}></img>
+            </div>
           </div>
           <div className="pokemon-types-container">
             {display_types(pokemon.types)}
