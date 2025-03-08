@@ -32,6 +32,8 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+    gap: 1%;
+    padding: 2%;
 }
 
 .dropdown {
@@ -39,12 +41,12 @@
     height: 10vh;
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 2%;
     border: none;
 }
 
 .dropdown:hover {
-    background-color: rgb(219, 219, 219);
+    opacity: 0.5;
 }
 
 .search-button {

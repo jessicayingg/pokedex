@@ -5,6 +5,7 @@ import "@/styles/pokedex-page/pokedex.css";
 import "@/styles/pokedex-page/dpad.css";
 import "@/styles/navbar.css";
 import "@/styles/login-register-pages/login.css";
+import "@/styles/pokemontypes.css";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
