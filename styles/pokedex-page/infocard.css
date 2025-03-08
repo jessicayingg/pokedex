@@ -1,7 +1,15 @@
 .info-card {
-    background-color: #FFFFFF;
-    padding: 2% 10%;
+    display: flex;
+    padding: 1% 1%;
+    background-color: white;
     width: 100%;
+}
+
+.info-card-colour-darker {
+    display: flex;
+    padding: 3% 3%;
+    width: 100%;
+    border-radius: 2%;
 }
 
 .info-card-colour {
@@ -11,11 +19,14 @@
     padding: 3%;
     gap: 1vh;
     width: 100%;
+    border-radius: 2%;
 }
 
 .pokemon-basic-info {
     display: flex;
     flex-direction: row;
+    gap: 5%;
+    width: 100%;
 }
 
 .pokemon-name-container {
@@ -24,7 +35,7 @@
     display: flex;
     flex-direction: column;
     padding: 2%;
-    border-radius: 8%;
+    border-radius: 4%;
 }
 
 .pokemon-name {
@@ -39,12 +50,12 @@
 .pokemon-img-container {
     background-color: white;
     width: fit-content;
+    border-radius: 4%;
 }
 
 .types-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: white;
+    display: flex;
+    width: fit-content;
 }
 
 .pokemon-type {
@@ -56,6 +67,15 @@
     background-color: gray;
 }
 
+.height-weight-container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    gap: 5%;
+    width: 100%;
+    border-radius: 4%;
+}
+
 .pokemon-height-container, .pokemon-weight-container {
     background-color: white;
     width: fit-content;
@@ -65,16 +85,32 @@
     background-color: #82C373;
 }
 
+.grass-type-darker {
+    background-color: #3e902c;
+}
+
 .poison-type {
-    background-color: rgb(137, 0, 195);
+    background-color: rgb(156, 18, 214);
+}
+
+.poison-type-darker {
+    background-color: rgb(117, 0, 168);
 }
 
 .water-type {
     background-color: rgb(17, 108, 255);
 }
 
+.water-type-darker {
+    background-color: rgb(0, 77, 200);
+}
+
 .bug-type {
     background-color: rgb(139, 213, 0);
+}
+
+.bug-type-darker {
+    background-color: rgb(107, 164, 0);
 }
 
 .electric-type {
@@ -89,46 +125,102 @@
     background-color: #82c4f4;
 }
 
+.flying-type-darker {
+    background-color: #53abe9;
+}
+
 .fighting-type {
     background-color: rgb(220, 81, 0);
+}
+
+.fighting-type-darker {
+    background-color: rgb(167, 70, 13);
 }
 
 .ground-type {
     background-color: rgb(172, 114, 60);
 }
 
+.ground-type-darker {
+    background-color: rgb(133, 83, 37);
+}
+
 .steel-type {
     background-color: rgb(98, 142, 173);
+}
+
+.steel-type-darker {
+    background-color: rgb(62, 103, 132);
 }
 
 .dragon-type {
     background-color: rgb(108, 56, 238);
 }
 
+.dragon-type-darker {
+    background-color: rgb(77, 30, 197);
+}
+
 .fairy-type {
     background-color: rgb(255, 127, 187);
+}
+
+.fairy-type-darker {
+    background-color: rgb(232, 81, 152);
 }
 
 .rock-type {
     background-color: rgb(109, 109, 109);
 }
 
+.rock-type-darker {
+    background-color: rgb(74, 74, 74);
+}
+
 .dark-type {
-    background-color: rgb(26, 26, 26);
+    background-color: rgb(67, 67, 67);
+}
+
+.dark-type-darker {
+    background-color: rgb(35, 35, 35);
 }
 
 .fire-type {
     background-color: rgb(221, 0, 0);
 }
 
+.fire-type-darker {
+    background-color: rgb(175, 0, 0);
+}
+
 .psychic-type {
     background-color: #cd0096;
+}
+
+.psychic-type-darker {
+    background-color: #a40078;
 }
 
 .ghost-type {
     background-color: rgb(120, 0, 120);
 }
 
+.ghost-type-darker {
+    background-color: rgb(88, 0, 88);
+}
+
 .ice-type {
     background-color: rgb(0, 204, 255);
+}
+
+.ice-type-darker {
+    background-color: rgb(8, 168, 208);
+}
+
+.normal-type {
+    background-color: rgb(169, 169, 169);
+}
+
+.normal-type-darker {
+    background-color: gray;
 }
