@@ -7,15 +7,23 @@
 .info-card-colour {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    gap: 2vh;
 }
 
 .pokemon-name-container {
     background-color: white;
-    width: fit-content;
+    width: 80%;
+}
+
+.pokemon-name {
+    font-size: 30px;
 }
 
 .pokemon-number {
-    font-size: smaller;
+    font-size: 15px;
+    margin-left: 4%
 }
 
 .pokemon-img-container {
@@ -61,6 +69,10 @@
 
 .electric-type {
     background-color: rgb(255, 217, 0);
+}
+
+.electric-type-darker {
+    background-color: rgb(255, 187, 0);
 }
 
 .flying-type {

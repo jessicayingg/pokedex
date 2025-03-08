@@ -8,8 +8,8 @@ type PokemonProps = {
 function display_pokemon({ pokemon }: PokemonProps) {
   if (pokemon.types.length == 2 && pokemon.types[0].type.name === "normal") {
     return (
-      <div className={`${pokemon.types[1].type.name}-type info-card-colour`}>
-        <div>
+      <div className={`${pokemon.types[1].type.name}-type-darker info-card`}>
+        <div className={`${pokemon.types[1].type.name}-type info-card-colour`}>
           <div className="pokemon-name-container">
             <p>
               {pokemon.name}{" "}
@@ -33,13 +33,13 @@ function display_pokemon({ pokemon }: PokemonProps) {
     );
   } else {
     return (
-      <div className={`${pokemon.types[0].type.name}-type info-card-colour`}>
-        <div>
+      <div className={`${pokemon.types[0].type.name}-type-darker info-card`}>
+        <div className={`${pokemon.types[0].type.name}-type info-card-colour`}>
           <div className="pokemon-name-container">
-            <p>
-              {pokemon.name}{" "}
+            <div className="pokemon-name">
+              {pokemon.name}
               <span className="pokemon-number"> (No. {pokemon.id}) </span>
-            </p>
+            </div>
           </div>
           <div className="pokemon-img-container">
             <img src={pokemon.image}></img>
@@ -47,11 +47,13 @@ function display_pokemon({ pokemon }: PokemonProps) {
           <div className="pokemon-types-container">
             {display_types(pokemon.types)}
           </div>
-          <div className="pokemon-height-container">
-            <p> Height: {Number(pokemon.height) / 10} m </p>
-          </div>
-          <div className="pokemon-weight-container">
-            <p> Weight: {Number(pokemon.weight) / 10} kg </p>
+          <div className="height-weight-container">
+            <div className="pokemon-height-container">
+              <p> Height: {Number(pokemon.height) / 10} m </p>
+            </div>
+            <div className="pokemon-weight-container">
+              <p> Weight: {Number(pokemon.weight) / 10} kg </p>
+            </div>
           </div>
         </div>
       </div>
@@ -84,8 +86,6 @@ function display_types(strList: any[]) {
   }
 }
 
-const InfoCard = ({ pokemon }: PokemonProps) => (
-  <div className="info-card">{display_pokemon({ pokemon })}</div>
-);
+const InfoCard = ({ pokemon }: PokemonProps) => display_pokemon({ pokemon });
 
 export default InfoCard;
