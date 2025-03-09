@@ -46,6 +46,7 @@
 
 .mini-display {
     height: 80%;
+    aspect-ratio: 2.5;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
