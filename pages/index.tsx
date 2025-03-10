@@ -82,6 +82,16 @@ const Index = () => {
 
   const toggleFavourite = () => {
     setIsFavourite((prev) => !prev);
+    if (pokemonList.length > 0) {
+      pokemonList[curPokemonIndex].favourite = isFavourite;
+    }
+  };
+
+  const changeStar = (isFavourited: boolean) => {
+    if (isFavourited) {
+      return solidStar;
+    }
+    return regularStar;
   };
 
   return (
@@ -98,7 +108,9 @@ const Index = () => {
           <div className="info-card-controls">
             <button className="star-button" onClick={toggleFavourite}>
               {/* regularStar for regular, solidStar for solid*/}
-              <FontAwesomeIcon icon={isFavourite ? solidStar : regularStar} />
+              <FontAwesomeIcon
+                icon={changeStar(pokemonList[curPokemonIndex].favourite)}
+              />
             </button>
             <div className="mini-display">
               <img

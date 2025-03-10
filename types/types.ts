@@ -12,6 +12,8 @@ export type PokemonInfo = {
   weight: string;
   image: string; // url of the image
 
+  favourite: boolean;
+
   /*
   gen: string;
   desc: string;
