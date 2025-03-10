@@ -95,8 +95,8 @@ const Index = () => {
             )}
             {pokemonList.length == 0 && <div className="info-card" />}
           </div>
-          <div className="info-card-controls" onClick={toggleFavourite}>
-            <button className="star-button">
+          <div className="info-card-controls">
+            <button className="star-button" onClick={toggleFavourite}>
               {/* regularStar for regular, solidStar for solid*/}
               <FontAwesomeIcon icon={isFavourite ? solidStar : regularStar} />
             </button>
