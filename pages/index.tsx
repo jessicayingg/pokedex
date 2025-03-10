@@ -16,6 +16,8 @@ const Index = () => {
 
   const [curPokemonIndex, setCurPokemonIndex] = useState(0); // Track the current index of the pokemon displayed
 
+  const [isFavourite, setIsFavourite] = useState(false);
+
   useEffect(() => {
     // Fetch data from the local API route
     const fetchPokemon = async () => {
@@ -78,6 +80,10 @@ const Index = () => {
     }
   };
 
+  const toggleFavourite = () => {
+    setIsFavourite((prev) => !prev);
+  };
+
   return (
     <Layout>
       <div className="pokedex">
@@ -89,10 +95,10 @@ const Index = () => {
             )}
             {pokemonList.length == 0 && <div className="info-card" />}
           </div>
-          <div className="info-card-controls">
+          <div className="info-card-controls" onClick={toggleFavourite}>
             <button className="star-button">
               {/* regularStar for regular, solidStar for solid*/}
-              <FontAwesomeIcon icon={regularStar} />
+              <FontAwesomeIcon icon={isFavourite ? solidStar : regularStar} />
             </button>
             <div className="mini-display">
               <img
