@@ -87,8 +87,8 @@ const Index = () => {
     }
   };
 
-  const changeStar = (isFavourited: boolean) => {
-    if (isFavourited) {
+  const changeStar = (pokemon: PokemonInfo) => {
+    if (pokemon && pokemon.favourite) {
       return solidStar;
     }
     return regularStar;
@@ -109,7 +109,7 @@ const Index = () => {
             <button className="star-button" onClick={toggleFavourite}>
               {/* regularStar for regular, solidStar for solid*/}
               <FontAwesomeIcon
-                icon={changeStar(pokemonList[curPokemonIndex].favourite)}
+                icon={changeStar(pokemonList[curPokemonIndex])}
               />
             </button>
             <div className="mini-display">
