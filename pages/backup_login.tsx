@@ -13,21 +13,25 @@ const loginView = () => {
     e.preventDefault();
     setError(""); // Clear any previous errors
 
-    console.log(email);
-    console.log(password);
+    try {
+      const result = await signIn("credentials", {
+        email,
+        password,
+        redirect: false, // Prevent auto redirection
+      });
 
-    const result = await signIn("credentials", {
-      email,
-      password,
-      redirect: false, // Prevent auto redirection
-    });
+      console.log("SignIn Result: ", result);
 
-    console.log("SignIn Result: ", result);
-
-    if (result?.error) {
-      setError("Invalid email or password.");
-    } else {
-      router.push("/");
+      if (result?.error) {
+        console.error("Login error:", result.error);
+        setError("Invalid email or password.");
+      } else {
+        console.log("Login success:", result);
+        router.push("/"); // Redirect on successful login
+      }
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      setError("Something went wrong. Please try again.");
     }
   };
 
@@ -58,9 +62,7 @@ const loginView = () => {
             ></input>
             <div className="forgot-password">Forgot password?</div>
           </div>
-          <button className="login-button" type="submit">
-            Log in
-          </button>
+          <button className="login-button">Log in</button>
         </form>
 
         <div className="signup-container">
