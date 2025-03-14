@@ -7,7 +7,7 @@ export const navHomeButton: NavButton = {
   extraClasses: "",
 };
 
-const navButtons: NavButton[] = [
+export const navButtonsLoggedOut: NavButton[] = [
   {
     label: "Pokemon",
     path: "/",
@@ -55,4 +55,40 @@ const navButtons: NavButton[] = [
   },
 ];
 
-export default navButtons;
+export const navButtonsLoggedIn: NavButton[] = [
+  {
+    label: "Pokemon",
+    path: "/",
+    extraClasses: "",
+  },
+  {
+    label: "Moves",
+    path: "/page1",
+    extraClasses: "",
+  },
+  {
+    label: "Types",
+    path: "/page2",
+    extraClasses: "",
+  },
+  {
+    label: "Abilities",
+    path: "/page2",
+    extraClasses: "",
+  },
+  {
+    label: "Moves",
+    path: "/page2",
+    extraClasses: "",
+  },
+  {
+    label: "Map",
+    path: "/page2",
+    extraClasses: "",
+  },
+  {
+    label: "My Team",
+    path: "/page2",
+    extraClasses: "",
+  },
+];
