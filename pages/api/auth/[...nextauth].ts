@@ -52,4 +52,18 @@ export default NextAuth({
     signIn: "/",
     signOut: "/login",
   },
+  callbacks: {
+    async session({ session, token }) {
+      if (session.user && token.email) {
+        session.user.name = token.email;
+      }
+      return session;
+    },
+    async jwt({ token, user }) {
+      if (user) {
+        token.email = user.email;
+      }
+      return token;
+    },
+  },
 });
