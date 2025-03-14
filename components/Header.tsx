@@ -1,6 +1,7 @@
 import { NavButton } from "@/types/types";
 import Button from "./Button";
 import { useRouter } from "next/router";
+import { signOut } from "next-auth/react";
 
 type HeaderProps = {
   navButtons: NavButton[];
@@ -24,7 +25,9 @@ const Header = ({ navButtons, loggedIn, loggedInName }: HeaderProps) => {
             />
           ))}
           <button className="NavButton profile-button">{loggedInName}</button>
-          <button className="NavButton log-in-button">Log out</button>
+          <button className="NavButton log-in-button" onClick={() => signOut()}>
+            Log out
+          </button>
         </div>
       );
     } else {
