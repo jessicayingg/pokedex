@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { PokemonInfo } from "@/types/types";
 import DropdownPokemon from "../components/DropdownPokemon";
 
+// for delayed countdown for delayed search
+import { useRef } from "react";
+
 type SearchbarProps = {
   onSearch: (query: string) => void;
   onDropDownSelect: (query: string) => void;
@@ -14,6 +17,9 @@ const Searchbar = ({ onSearch, onDropDownSelect }: SearchbarProps) => {
     []
   );
   const [typingSearch, setTypingSearch] = useState<string | null>(null);
+
+  // for the delayed countdown
+  const countdownRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     if (!typingSearch) {
@@ -50,6 +56,15 @@ const Searchbar = ({ onSearch, onDropDownSelect }: SearchbarProps) => {
     setDropDownPokemonList([]);
   };
 
+  const delayedSearch = (inputStr: any) => {
+    if (countdownRef.current) {
+      clearTimeout(countdownRef.current);
+    }
+    countdownRef.current = setTimeout(() => {
+      setTypingSearch(inputStr);
+    }, 500);
+  };
+
   return (
     <div className="searchbar">
       <div className="search-container">
@@ -59,8 +74,8 @@ const Searchbar = ({ onSearch, onDropDownSelect }: SearchbarProps) => {
           placeholder="Find a pokemon"
           value={userInput}
           onChange={(e) => {
-            setTypingSearch(e.target.value);
             setUserInput(e.target.value);
+            delayedSearch(e.target.value);
           }}
         ></input>
         <button className="search-button" onClick={handleSearch}>
