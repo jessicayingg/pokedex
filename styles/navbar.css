@@ -10,10 +10,6 @@
     justify-content: space-between;
   }
 
-  .spacer {
-    
-  }
-
   .logo {
     width: fit-content;
   }
@@ -39,7 +35,7 @@
     
     max-width: 100%;
     flex-grow: 1;
-    margin-left: 38%;
+    margin-left: 35%;
   }
   
   .NavButton {
@@ -80,8 +76,4 @@
   }
 
   .profile-button {
-    background-color:#FFD2D2;
-    border-color: #a00000;
-    border-style: solid;
-    width: 15%;
   }
