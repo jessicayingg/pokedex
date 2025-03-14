@@ -9,6 +9,10 @@ export default NextAuth({
     CredentialsProvider({
       name: "Credentials",
       credentials: {
+        name: {
+          label: "Name",
+          type: "text",
+        },
         email: {
           label: "Email",
           type: "text",
@@ -16,8 +20,8 @@ export default NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        const { email, password } = credentials ?? {};
-        console.log("Credentials received: ", email, password);
+        const { name, email, password } = credentials ?? {};
+        console.log("Credentials received: ", name, email, password);
 
         // Connect to the database
         await connectToDB();
@@ -40,7 +44,7 @@ export default NextAuth({
           throw new Error("Incorrect email or password.");
         }
 
-        return { id: user.id, email: user.email };
+        return { id: user.id, name: user.name, email: user.email };
       },
     }),
   ],
@@ -53,17 +57,18 @@ export default NextAuth({
     signOut: "/login",
   },
   callbacks: {
-    async session({ session, token }) {
-      if (session.user && token.email) {
-        session.user.name = token.email;
-      }
-      return session;
-    },
     async jwt({ token, user }) {
       if (user) {
+        token.name = user.name;
         token.email = user.email;
       }
       return token;
+    },
+    async session({ session, token }) {
+      if (session.user && token.name) {
+        session.user.name = token.name;
+      }
+      return session;
     },
   },
 });

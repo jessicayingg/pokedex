@@ -8,12 +8,16 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === "POST") {
-    const { email, password } = req.body;
+    const { name, email, password } = req.body;
 
-    console.log("Received request to register user:", { email, password });
+    console.log("Received request to register user:", {
+      name,
+      email,
+      password,
+    });
 
     // 1. Validate input
-    if (!email || !password) {
+    if (!name || !email || !password) {
       console.log("Validation failed: missing email or password");
       return res
         .status(400)
@@ -40,6 +44,7 @@ export default async function handler(
       console.log("Creating new user with email:", email);
       // 4. Create the user without hashing the password
       const newUser = new User({
+        name,
         email,
         password: hashedPassword,
       });
@@ -48,7 +53,7 @@ export default async function handler(
       // 5. Save the user to the database
       await newUser.save();
 
-      console.log("User registered successfully:", { email });
+      console.log("User registered successfully:", { email, name });
       // 6. Send success response
       return res.status(201).json({ message: "User registered successfully" });
     } catch (error) {

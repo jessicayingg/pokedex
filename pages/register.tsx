@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import { useState } from "react";
 
 const registerView = () => {
+  const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -16,6 +17,7 @@ const registerView = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          name,
           email: username, // Assuming the username is the email here
           password,
         }),
@@ -36,6 +38,16 @@ const registerView = () => {
     <Layout>
       <div className="login-container">
         <div className="login-text">Register</div>
+        <div className="login-username-container">
+          <div>Name</div>
+          <input
+            className="username-input"
+            type="text"
+            placeholder="Type your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          ></input>
+        </div>
         <div className="login-username-container">
           <div>Username</div>
           <input
