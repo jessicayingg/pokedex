@@ -18,5 +18,6 @@ export type PokemonInfo = {
   gen: string;
   desc: string;
   evolutions: string[];
-  abilities: { name: string; description: string }[]; */
+  abilities: { name: string; description: string }[]; 
+  other images?? */
 };
