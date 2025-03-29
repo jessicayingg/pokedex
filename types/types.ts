@@ -19,5 +19,5 @@ export type PokemonInfo = {
   desc: string;
   evolutions: string[];
   abilities: { name: string; description: string }[]; 
-  other images?? */
+  other images??: maybe like a 360 of the pokemon */
 };
