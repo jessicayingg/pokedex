@@ -96,7 +96,7 @@ const Index = () => {
 
   return (
     <Layout>
-      <div className="pokedex">
+      <div className="pokedex fade-in">
         <div className="pokedex-left">
           <div className="circle"></div>
           <div className="info-card-container">

@@ -6,6 +6,7 @@ import "@/styles/pokedex-page/dpad.css";
 import "@/styles/navbar.css";
 import "@/styles/login-register-pages/login.css";
 import "@/styles/pokemontypes.css";
+import "@/styles/simple-animations.css";
 import type { AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
 
