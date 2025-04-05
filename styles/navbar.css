@@ -26,6 +26,11 @@
   .logo-icon {
     object-fit: contain;
     max-height: 6vh;
+    transition: transform 0.6s ease;
+  }
+
+  .logo-icon:hover {
+    transform: rotate(360deg);
   }
   
   .nav-buttons {
