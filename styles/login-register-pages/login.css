@@ -1,12 +1,13 @@
 .login-container {
     /*background-color: rgb(240, 240, 240);*/
-    background-color: white;
+    background-color: #FFD2D2;
     width: 50vh;
     display: flex;
     flex-direction: column;
     justify-self: center;
     gap: 5vh;
-    padding: 10px;
+    padding: 4%;
+    border-radius: 10%;
 }
 
 .login-text {
@@ -14,8 +15,24 @@
     align-self: center;
 }
 
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-username-container, .login-password-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+    gap: 1vh;
+    margin-bottom: 1vh;
+}
+
 .username-input, .password-input {
-    width: 98%;
+    font-size: 15px;
+    padding: 2%;
+    border-radius: 10px;
+    border-style: solid;
 }
 
 .forgot-password {
@@ -26,6 +43,8 @@
     height: 8vh;
     font-size: 20px;
     border-radius: 30px;
+    width: 50%;
+    align-self: center;
 }
 
 .signup-container {

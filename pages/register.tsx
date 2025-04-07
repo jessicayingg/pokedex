@@ -62,7 +62,7 @@ const registerView = () => {
           <div>Password</div>
           <input
             className="password-input"
-            type="text"
+            type="password"
             placeholder="Type your password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

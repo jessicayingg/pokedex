@@ -36,7 +36,7 @@ const loginView = () => {
     <Layout>
       <div className="login-container">
         <div className="login-text">Login</div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="form-container">
           <div className="login-username-container">
             <div>Email</div>
             <input
@@ -57,7 +57,7 @@ const loginView = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             ></input>
-            <div className="forgot-password">Forgot password?</div>
+            {/*<div className="forgot-password">Forgot password?</div>*/}
           </div>
           <button className="login-button" type="submit">
             Log in
