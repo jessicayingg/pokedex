@@ -27,6 +27,7 @@ const loginView = () => {
     if (result?.error) {
       setError("Invalid email or password.");
     } else {
+      // Go to home page
       router.push("/");
     }
   };
@@ -64,8 +65,10 @@ const loginView = () => {
         </form>
 
         <div className="signup-container">
-          <div>New? Make an account</div>
-          <button className="signup-button">Sign up</button>
+          <div>
+            New?
+            <a href="/register">Make an account!</a>
+          </div>
         </div>
       </div>
     </Layout>

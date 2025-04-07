@@ -23,8 +23,12 @@ function display_pokemon({ pokemon }: PokemonProps) {
             </div>
           </div>
           <div className="height-weight-container">
-            <p> Height: {Number(pokemon.height) / 10} m </p>
-            <p> Weight: {Number(pokemon.weight) / 10} kg </p>
+            <p className="pokemon-height-weight">
+              Height: {Number(pokemon.height) / 10} m
+            </p>
+            <p className="pokemon-height-weight">
+              Weight: {Number(pokemon.weight) / 10} kg
+            </p>
           </div>
         </div>
       </div>
@@ -46,8 +50,12 @@ function display_pokemon({ pokemon }: PokemonProps) {
             </div>
           </div>
           <div className="height-weight-container">
-            <p> Height: {Number(pokemon.height) / 10} m </p>
-            <p> Weight: {Number(pokemon.weight) / 10} kg </p>
+            <p className="pokemon-height-weight">
+              Height: {Number(pokemon.height) / 10} m
+            </p>
+            <p className="pokemon-height-weight">
+              Weight: {Number(pokemon.weight) / 10} kg
+            </p>
           </div>
         </div>
       </div>

@@ -76,7 +76,7 @@
     border-radius: 4%;
 }
 
-.pokemon-height-container, .pokemon-weight-container {
-    background-color: white;
-    width: fit-content;
+
+.pokemon-height-weight {
+    padding-left: 15px;
 }
