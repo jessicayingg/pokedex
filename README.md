@@ -4,7 +4,7 @@ Use the Pokedex to search for Pokemon. Learn about their moves, abilities, and o
 
 ## Installation
 
-Dillinger requires Next.js v15+ to run.
+Pokedex requires Next.js v15+ to run.
 
 To start the server:
 
