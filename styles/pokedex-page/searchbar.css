@@ -6,10 +6,6 @@
     justify-content: center;
 }
 
-.searchbar:hover {
-    border: 2px;
-}
-
 .search-input {
     width:100%;
     height: 4vh;
