@@ -16,6 +16,7 @@ const loginView = () => {
     console.log(email);
     console.log(password);
 
+    // Use NextAuth to sign in
     const result = await signIn("credentials", {
       email,
       password,
